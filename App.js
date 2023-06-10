@@ -38,16 +38,18 @@ export default function App() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity
-        style={[styles.button, { marginTop: 15, borderColor: '#121212' }]}
-        onPress={() => reiniciar()}
-      >
-        <View style={styles.btnArea}>
-          <Text style={[styles.btnText, { color: '#121212' }]}>
-            Reiniciar Biscoito
-          </Text>
-        </View>
-      </TouchableOpacity>
+      {frase !== '' && (
+        <TouchableOpacity
+          style={[styles.button, { marginTop: 15, borderColor: '#121212' }]}
+          onPress={() => reiniciar()}
+        >
+          <View style={styles.btnArea}>
+            <Text style={[styles.btnText, { color: '#121212' }]}>
+              Reiniciar Biscoito
+            </Text>
+          </View>
+        </TouchableOpacity>
+      )}
     </View>
   );
 }
